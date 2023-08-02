@@ -1,5 +1,6 @@
 package com.example.kotlin_contact_list
 
+import AddContactDialog
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
@@ -7,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
@@ -41,8 +43,12 @@ fun ContactScreen(
                 Icon(imageVector = Icons.Default.Add, contentDescription = "Add Contact")
             }
 
-        }
+        },
+        modifier = Modifier.padding(16.dp)
     ) { padding ->
+        if(state.isAddingContact){
+            AddContactDialog(state = state, onEvent = onEvent)
+        }
         LazyColumn(
             contentPadding = padding,
             modifier = Modifier.fillMaxSize(),
