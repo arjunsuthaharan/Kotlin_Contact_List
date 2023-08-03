@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
+//ViewModel for Contact, handles events declared in ContactEvent
 class ContactViewModel (
     private val dao: ContactDAO
 ): ViewModel() {

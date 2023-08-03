@@ -18,6 +18,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.room.Room
 import com.example.kotlin_contact_list.ui.theme.Kotlin_Contact_ListTheme
 
+//Main component activity on app launch, creates the database and returns the ContactViewModel and sets to ContactScreen
 class MainActivity : ComponentActivity() {
 
     private val db by lazy {
@@ -37,7 +38,6 @@ class MainActivity : ComponentActivity() {
             }
         }
     )
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

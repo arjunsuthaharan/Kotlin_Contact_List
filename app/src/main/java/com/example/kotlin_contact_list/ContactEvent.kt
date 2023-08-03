@@ -1,5 +1,6 @@
 package com.example.kotlin_contact_list
 
+//Interface for events involving Contacts database
 sealed interface ContactEvent{
     object SaveContact: ContactEvent
     data class SetFirstName(val firstName: String): ContactEvent

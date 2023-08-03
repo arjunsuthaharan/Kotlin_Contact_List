@@ -15,6 +15,7 @@ import com.example.kotlin_contact_list.Contact
 import com.example.kotlin_contact_list.ContactEvent
 import com.example.kotlin_contact_list.ContactState
 
+//UI for 'Create Content' screen, represented through an AlertDialog
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AddContactDialog(
@@ -27,7 +28,7 @@ fun AddContactDialog(
         onDismissRequest = {
                            onEvent(ContactEvent.HideDialog)
         },
-        title = { Text(text = "Add contact")},
+        title = { Text(text = "Create contact")},
         text = {
             Column(
                 verticalArrangement = Arrangement.spacedBy(8.dp)

@@ -6,6 +6,7 @@ import androidx.room.Query
 import androidx.room.Upsert
 import kotlinx.coroutines.flow.Flow
 
+//DAO for the Contact data class, contains the CRUD operations along with SQL queries for sorting data by first name, last name or phone number
 @Dao
 interface ContactDAO {
     @Upsert
